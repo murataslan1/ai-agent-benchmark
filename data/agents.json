@@ -1,0 +1,242 @@
+{
+    "last_updated": "2025-12-25",
+    "autonomous_agents": [
+        {
+            "name": "Devin 2.0",
+            "company": "Cognition Labs",
+            "version": "2.0",
+            "released": "April 2025",
+            "model": "GPT-5/Claude Hybrid",
+            "pricing": "$20/mo + usage",
+            "swe_bench": 62.2,
+            "features": [
+                "Parallel instances",
+                "Cloud VM",
+                "Full lifecycle"
+            ]
+        },
+        {
+            "name": "Manus AI",
+            "company": "Butterfly Effect",
+            "version": "1.5",
+            "released": "March 2025",
+            "model": "Proprietary/Ensemble",
+            "pricing": "Free/$199/mo",
+            "features": [
+                "General ops",
+                "Web browsing",
+                "Live deploy"
+            ]
+        },
+        {
+            "name": "Trae",
+            "company": "ByteDance",
+            "version": "1.0",
+            "released": "December 2025",
+            "model": "GPT-4o/Claude 3.7",
+            "pricing": "FREE/$10/mo",
+            "features": [
+                "SOLO mode",
+                "VS Code fork",
+                "Privacy concerns"
+            ]
+        },
+        {
+            "name": "Factory Droids",
+            "company": "Factory AI",
+            "version": "2.1",
+            "released": "June 2025",
+            "model": "Custom/GPT-5.2",
+            "pricing": "$20-$200/mo",
+            "swe_bench": 71.5,
+            "features": [
+                "Enterprise",
+                "DORA metrics",
+                "Headless mode"
+            ]
+        },
+        {
+            "name": "Google Jules",
+            "company": "Google",
+            "version": "Public Beta",
+            "released": "May 2025",
+            "model": "Gemini 3 Pro",
+            "pricing": "TBD",
+            "features": [
+                "Multi-repo",
+                "Cloud VM",
+                "Async"
+            ]
+        },
+        {
+            "name": "Traycer AI",
+            "company": "Traycer",
+            "version": "1.0",
+            "released": "October 2025",
+            "model": "Various",
+            "pricing": "$25/user/mo",
+            "features": [
+                "Spec-first",
+                "Planner agent",
+                "Handoff"
+            ]
+        },
+        {
+            "name": "Compyle",
+            "company": "Compyle",
+            "version": "2.0",
+            "model": "Various",
+            "pricing": "Free trial",
+            "features": [
+                "Socratic method",
+                "Clarifying questions"
+            ]
+        },
+        {
+            "name": "Claude Code",
+            "company": "Anthropic",
+            "version": "Latest",
+            "model": "Claude 4.5 Opus",
+            "pricing": "Usage-based",
+            "features": [
+                "Computer Use",
+                "Terminal",
+                "CLAUDE.md"
+            ]
+        },
+        {
+            "name": "Replit Agent",
+            "company": "Replit",
+            "version": "v3",
+            "released": "September 2025",
+            "model": "Custom/Google",
+            "pricing": "$20+/mo",
+            "features": [
+                "Visual wireframing",
+                "Auto-deploy",
+                "Zero-to-one"
+            ]
+        },
+        {
+            "name": "Zencoder",
+            "company": "Zencoder",
+            "version": "1.2",
+            "released": "October 2025",
+            "model": "Proprietary",
+            "pricing": "Enterprise",
+            "swe_bench": 70.1,
+            "features": [
+                "Repo Grokking",
+                "Low hallucination"
+            ]
+        }
+    ],
+    "ide_assistants": [
+        {
+            "name": "Cursor",
+            "company": "Anysphere",
+            "valuation": "$29.3B",
+            "pricing": "$20/mo ($200 Ultra)",
+            "model": "GPT-5.2/Claude 4",
+            "features": [
+                "Tab prediction",
+                "Composer",
+                "Shadow Workspaces"
+            ]
+        },
+        {
+            "name": "Windsurf",
+            "company": "Codeium",
+            "pricing": "$20/mo",
+            "model": "Cascade 2.0",
+            "features": [
+                "Flow state",
+                "Stability",
+                "Deep integration"
+            ]
+        },
+        {
+            "name": "GitHub Copilot",
+            "company": "Microsoft",
+            "pricing": "$10-19/mo",
+            "model": "GPT-4o",
+            "features": [
+                "GitHub integration",
+                "Agent Mode"
+            ]
+        },
+        {
+            "name": "Cline",
+            "company": "Open Source",
+            "pricing": "Free (BYOK)",
+            "model": "User choice",
+            "github_stars": 40000,
+            "features": [
+                "Privacy",
+                "VS Code extension"
+            ]
+        },
+        {
+            "name": "Void",
+            "company": "Open Source",
+            "pricing": "Free (BYOK)",
+            "features": [
+                "Privacy-first",
+                "Cursor fork"
+            ]
+        }
+    ],
+    "open_source": [
+        {
+            "name": "OpenCode",
+            "stars": 41000,
+            "type": "TUI"
+        },
+        {
+            "name": "OpenHands",
+            "stars": 50000,
+            "type": "Agent"
+        },
+        {
+            "name": "Aider",
+            "stars": 35000,
+            "type": "CLI"
+        },
+        {
+            "name": "SWE-Agent",
+            "stars": 20000,
+            "type": "Benchmark"
+        },
+        {
+            "name": "Continue.dev",
+            "stars": 25000,
+            "type": "Extension"
+        },
+        {
+            "name": "MetaGPT",
+            "stars": 50000,
+            "type": "Multi-agent"
+        }
+    ],
+    "app_builders": [
+        {
+            "name": "v0",
+            "company": "Vercel",
+            "best_for": "UI/React"
+        },
+        {
+            "name": "Bolt.new",
+            "company": "StackBlitz",
+            "best_for": "Full-stack"
+        },
+        {
+            "name": "Lovable",
+            "best_for": "MVPs + auth"
+        },
+        {
+            "name": "Creao",
+            "pricing": "30 free credits",
+            "best_for": "Budget"
+        }
+    ]
+}

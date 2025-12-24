@@ -1,0 +1,96 @@
+{
+    "swe_bench_verified": {
+        "date": "2025-12-25",
+        "description": "Real-world GitHub issue solving",
+        "leaderboard": [
+            {
+                "rank": 1,
+                "name": "Claude 4.5 Opus + Tools",
+                "score": 74.40,
+                "date": "Nov 2025"
+            },
+            {
+                "rank": 2,
+                "name": "Gemini 3 Pro Preview",
+                "score": 74.20,
+                "date": "Nov 2025"
+            },
+            {
+                "rank": 3,
+                "name": "GPT-5.2 High Reasoning",
+                "score": 71.80,
+                "date": "Dec 2025"
+            },
+            {
+                "rank": 4,
+                "name": "Factory Droids",
+                "score": 71.50,
+                "date": "2025"
+            },
+            {
+                "rank": 5,
+                "name": "Claude 4.5 Sonnet",
+                "score": 70.60,
+                "date": "Sept 2025"
+            },
+            {
+                "rank": 6,
+                "name": "Zencoder Agent",
+                "score": 70.10,
+                "date": "2025"
+            },
+            {
+                "rank": 7,
+                "name": "Devin 2.0",
+                "score": 62.20,
+                "date": "2025"
+            }
+        ]
+    },
+    "ars_leaderboard": {
+        "description": "LiveCodeBench - competitive programming",
+        "leaderboard": [
+            {
+                "rank": 1,
+                "name": "Claude 4.5 Opus",
+                "score": 98.05
+            },
+            {
+                "rank": 2,
+                "name": "Claude 4.5 Sonnet",
+                "score": 95.01
+            },
+            {
+                "rank": 3,
+                "name": "Claude 4.5 Haiku",
+                "score": 94.57
+            },
+            {
+                "rank": 4,
+                "name": "GPT-5 Mini",
+                "score": 90.08
+            }
+        ]
+    },
+    "humaneval": {
+        "description": "Code generation accuracy",
+        "scores": [
+            {
+                "model": "Qwen 2.5 Coder 32B",
+                "score": 92
+            },
+            {
+                "model": "DeepSeek V3",
+                "score": 90
+            },
+            {
+                "model": "Codestral 25.01",
+                "score": 88
+            },
+            {
+                "model": "GPT-5.1 Codex",
+                "score": 85
+            }
+        ]
+    }
+}
