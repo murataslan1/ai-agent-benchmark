@@ -21,10 +21,26 @@
 - **Claude 3.7 Sonnet** released Feb 2025 - 128K output tokens, 62.3% SWE-Bench
 - **Gemini 2.0 Flash** GA Jan 30, 2025 - 1M context, 50% faster than 1.5 Pro
 - **DeepSeek V3** polarizes - 68x cheaper than Opus, mixed coding results
-- **Llama 3.3 70B** matches 405B coding with 1/6th compute
-- **Qwen 2.5 Coder 32B** - Open-source SOTA at 88.7% HumanEval
-- **GitHub Copilot Agent Mode** struggles - 45% success rate, context issues
-- **Cursor** pricing backlash stabilizing with new partnerships
+- **GPT-5.2** "Death by Benchmark" - Users report regression in real coding
+- **Minimax M2.1** emerges - Polyglot specialist (Kotlin/Go/Objective-C)
+- **"Vibe Coding" Backlash** - "AI slop" crisis in production codebases
+- **BYOK Migration** - Power users leaving Cursor for OpenCode/Claude CLI
+
+---
+
+## ⚠️ Critical Industry Shift: Vibe Coding vs Engineering Rigor
+
+The ecosystem has **bifurcated into two operational realities**:
+
+| Paradigm | Tools | User Profile | Risk Level |
+|:---------|:------|:-------------|:-----------|
+| **Vibe Coding** | Bolt.new, Lovable, Replit | Non-technical, rapid prototyping | ⚠️ HIGH |
+| **Engineering Rigor** | Claude Code CLI, OpenCode, Aider | Senior engineers, production work | ✅ LOW |
+
+> "The era of 'magic' AI coding is over. The era of managed, verified, and economically rational AI engineering has begun."
+
+### The "AI Slop" Crisis
+> "A junior engineer merged 1,000 lines of AI-generated code that broke a test environment; the code was so convoluted that rewriting it from scratch was faster than debugging." — HN
 
 ---
 
@@ -48,26 +64,44 @@
 
 ### 🤖 IDE Assistants (Buzz Score)
 
-| Rank | Agent | Buzz | Trend | Monthly Cost | Best Quote |
-|:----:|:------|:----:|:-----:|:------------:|:-----------|
-| 🥇 | **Claude Code** | 9/10 | 📈 Rising | $100+ | "Terminal isn't just command line—it's orchestration layer for AI-driven dev" |
-| 🥈 | **Cursor** | 8/10 | → Stable | $20-200 | "Fastest tab completion in the industry" |
-| 🥉 | **Aider** | 8/10 | 📈 Rising | $50-100 | "One of best kept secrets; exceptional quality" |
-| 4 | **Windsurf** | 7/10 | 📈 Rising | $15 | "Supercomplete feels more intuitive than Cursor" |
-| 5 | **Cline** | 7/10 | 📈 Rising | BYOK | "Changed how I code forever" |
-| 6 | **Copilot** | 6/10 | 📉 Declining | $10-39 | "Agent mode absolutely sucks at making changes" |
-| 7 | **Continue.dev** | 6/10 | → Stable | BYOK | "Snippet selection saves >30% tokens" |
+| Rank | Agent | Buzz | Trend | Monthly Cost | Key Issue |
+|:----:|:------|:----:|:-----:|:------------:|:----------|
+| 🥇 | **Claude Code** | 9/10 | 📈 Rising | $100+ | Terminal freezing |
+| 🥈 | **Cursor** | 8/10 | → Stable | $20-200 | Pricing opacity |
+| 🥉 | **Aider** | 8/10 | 📈 Rising | $50-100 | CLI learning curve |
+| 4 | **Windsurf** | 7/10 | 📈 Rising | $15 | "Infinite Loop" bug |
+| 5 | **Cline** | 7/10 | 📈 Rising | BYOK | Resource-heavy |
+| 6 | **OpenCode** | 7/10 | 📈 Rising | BYOK | NEW contender |
+| 7 | **Copilot** | 6/10 | 📉 Declining | $10-39 | Agent mode unreliable |
 
 ### 🧠 AI Models (December 2025 - January 2026)
 
-| Model | Context | HumanEval | SWE-Bench | Cost (per M tokens) |
-|:------|:-------:|:---------:|:---------:|:-------------------:|
-| **Claude 3.7 Sonnet** | 200K | - | 62.3% | $3/$15 |
-| **Gemini 2.0 Flash** | 1M | - | - | Lower than 1.5 Pro |
-| **GPT-4o** | 128K | 90.2% | 55.5% | $2.50/$10 |
-| **DeepSeek V3** | 128K | 74.5% | - | 68x cheaper than Opus |
-| **Llama 3.3 70B** | 128K | 88.4% | - | $0.10-0.60 |
-| **Qwen 2.5 Coder 32B** | 128K | 88.7% | - | Open-source |
+| Model | Context | Strength | Risk | Cost Tier |
+|:------|:-------:|:---------|:-----|:---------:|
+| **Claude 3.5 Opus 4.5** | 200K | Architecture, complex refactoring | Context degradation | $$$ |
+| **Claude 3.7 Sonnet** | 200K | Speed + quality balance | - | $$ |
+| **Gemini 2.0 Flash** | 1M | Rapid prototyping, multimodal | Logic derailment in long context | $ |
+| **DeepSeek V3** | 128K | Systems programming (Rust/C++) | "rm -rf" hallucination risk | $ |
+| **Minimax M2.1** | 128K | Polyglot (Kotlin/Go/Obj-C) | Newer, less tested | $ |
+| **GPT-5.2** | 400K | General knowledge | "Death by Benchmark" regression | $$ |
+| **Llama 3.3 70B** | 128K | Local/privacy, narrow domains | Less reasoning depth | FREE |
+| **Qwen 2.5 Coder 32B** | 128K | Open-source SOTA | - | FREE |
+
+---
+
+## 🚨 Security Alert: The "Zeta-Decoder" Attack Vector
+
+**Critical finding from security researchers:**
+
+> In 80 rounds of prompting, GPT-4o hallucinated **112 unique, non-existent packages** (e.g., `zeta-decoder`, `rtlog`).
+
+**Attack mechanism:**
+1. Attacker identifies hallucinated package names
+2. Registers them on PyPI/npm with malicious payloads
+3. Developer's AI suggests `pip install zeta-decoder`
+4. Malware installed into secure environment
+
+**⚠️ Mandatory Protocol:** Never blindly install AI-suggested libraries. Verify EVERY dependency manually.
 
 ---
 
@@ -79,56 +113,74 @@
 | 💼 Indie (Cost-Focused) | Aider + OpenRouter | **$50-100** | Claude Sonnet |
 | 💼 Indie (Productivity) | Cursor Pro or Claude Code | **$40-100** | GPT-4o/Sonnet |
 | 👥 Small Team (5) | Copilot Business | **$95** | O3 + GPT-4o |
-| 🏢 Medium Team (20) | Cursor Teams | **$800** | Full access |
-| 🔒 Privacy-Critical | Continue.dev + Aider | **$0-50** | Local Llama/Qwen |
+| 🏢 7-dev Team (Opus) | Claude Code | **$1,700/week** | Opus 4.5 |
+| 🔒 Privacy-Critical | OpenCode/Continue + Ollama | **$0-50** | Local Llama/Qwen |
 
 ---
 
-## 🔀 Switching Trends (Last 30 Days)
+## 🔀 The BYOK Migration
 
-### Cursor → Windsurf / Aider / Cline
-**Reason:** June 2025 pricing change + context degradation
-> "After price increase, Windsurf became my go-to... Canceled Cursor subscription" — Reddit
+**Power users are leaving opaque SaaS for BYOK (Bring Your Own Key) architectures:**
 
-### GitHub Copilot → Cursor / Windsurf
-**Reason:** Agent mode unreliability; better UX elsewhere
-> "Copilot wins for speed; Cursor nails longer context without losing quality" — Reddit
+| From | To | Reason |
+|:-----|:---|:-------|
+| Cursor | OpenCode | Cost transparency, model swapping |
+| Cursor | Claude Code CLI | Terminal power, explicit context control |
+| Windsurf | Aider | Token efficiency, git integration |
 
-### Proprietary → Open Source
-**Reason:** Cost concerns, privacy, vendor lock-in risk
-> Tools gaining: Aider + OpenRouter, Continue.dev + Ollama, Cline + local models
-
-### Monthly Re-evaluation Pattern (New Norm)
-> "Tools change so fast I have almost no expectations about validity in 6 months" — Developer
+> "This allows users to granularly control costs—using DeepSeek for cheap iterations and swapping to Opus 4.5 for final architectural reviews—without being locked into a SaaS markup."
 
 ---
 
 ## 🐛 Critical Issues (Last 30 Days)
 
-| Tool | Issue | Status |
-|:-----|:------|:------:|
-| **Claude Code** | Terminal freezing/unresponsiveness | ⚠️ Active |
-| **Cline 3.36.0** | Gemini 2.5 Flash compatibility broken | ⚠️ Active |
-| **Cline Oct 2025** | Replacing working code with placeholders | 🔧 Workaround |
-| **Cursor** | Context window degradation on large codebases | ⚠️ Known |
-| **Copilot Agent** | MCP server restarts every 5-10 minutes | ⚠️ Active |
-
-### Workarounds
-- Claude Code freezes: Restart terminal, split into smaller contexts
-- Cline compatibility: Revert to prior version or different model
-- Cursor context loss: Break into multiple smaller prompts
-- Copilot reliability: Switch to Chat mode (no agent)
+| Tool | Issue | Severity |
+|:-----|:------|:--------:|
+| **Claude Code** | Terminal freezing/unresponsiveness | 🔴 High |
+| **Cursor** | Pricing opacity, overage shock | 🟠 Medium |
+| **Windsurf** | "Infinite Loop" - agent spirals into clarifying questions | 🔴 High |
+| **Gemini 2.0 Pro** | "Quickly derails" after initial turns | 🟠 Medium |
+| **GPT-5.2** | "Breaking all the code" on simple UI requests | 🔴 High |
+| **Copilot Agent** | MCP server restarts every 5-10 minutes | 🟠 Medium |
+| **DeepSeek V3** | Random Chinese characters in code | 🟡 Low |
 
 ---
 
-## 💀 Dead/Dying Tools (Jan 2026)
+## 🎯 Domain-Specific Performance
 
-| Tool | Status | Evidence |
-|:-----|:------:|:---------|
-| **Amazon Q Developer** | 📉 Declining | "Only internal employees use it" — HN |
-| **Devin AI** | ❓ Disappeared | No user reports Dec 2025 - Jan 2026 |
-| **Bolt.new** | ⚠️ Niche only | "Good for frontend mockups, not production" |
-| **GitHub Copilot X** | ✅ Superseded | Features merged into standard Copilot |
+| Domain | Best Model | Risk | Notes |
+|:-------|:-----------|:-----|:------|
+| **Swift/SwiftUI** | ⚠️ NONE | 🔴 HIGH | All models hallucinate deprecated APIs |
+| **Rust/C++** | DeepSeek V3 | 🟢 LOW | Memory safety understanding |
+| **Kotlin/Go** | Minimax M2.1 | 🟢 LOW | Polyglot specialist |
+| **Data Science** | Use IDE → Paste to Notebook | 🟠 MED | In-notebook agents buggy |
+| **Legacy C → Rust** | DeepSeek V3 + TDD | 🟢 LOW | Generate tests first |
+
+### SwiftUI Workaround
+> Developers have built **custom MCP servers** (e.g., "SwiftZilla") that feed verified, up-to-date documentation directly into the agent's context window.
+
+---
+
+## 📋 Strategic Recommendations
+
+### The "Plan Mode" Protocol
+> Before allowing an agent to write code, explicitly prompt for a **text-based architectural plan**.
+
+```
+"Plan this: [describe task]"
+```
+
+This forces the model to:
+- Articulate logic
+- Identify dependencies
+- Outline changes BEFORE committing to code
+- Drastically reduces "infinite repair loops"
+
+### The "Two-Tier" Workflow
+1. **Expensive models (Opus 4.5)** → Planning and complex review ONLY
+2. **Cheap models (DeepSeek V3, Minimax)** → Code generation and unit tests
+
+This optimizes "intelligence-per-dollar" ratio.
 
 ---
 
@@ -136,36 +188,32 @@
 
 | Tool | Why Overlooked | Power User Verdict |
 |:-----|:---------------|:-------------------|
-| **Aider** | CLI interface intimidates GUI users | "Best kept secret; exceptional quality" |
-| **Claude Code** | Terminal-only, different mental model | "Superior to all GUI tools once you understand" |
-| **Continue.dev** | No marketing budget; YC pedigree unknown | "Snippet selection alone saves >30% tokens" |
-| **Replit Agent 3** | Positioned as "no-code" platform | Oct 2025 update made it suddenly competitive |
+| **Aider** | CLI intimidates GUI users | "Best kept secret" |
+| **Claude Code CLI** | Terminal-only mental model | "Superior to all GUI tools" |
+| **OpenCode** | BYOK, open-source | "Cursor without the markup" |
+| **Continue.dev** | No marketing budget | "Snippet selection saves >30% tokens" |
+| **Minimax M2.1** | New, Chinese origin | "Polyglot breakthrough" |
 
 ---
 
-## 🎯 Recommendation Matrix
+## 💀 Dead/Dying Tools (Jan 2026)
 
-### By Developer Profile
-
-| Profile | Tool | Model | Cost | Why |
-|:--------|:-----|:------|:----:|:----|
-| 🎓 Student | Cursor Free / Copilot Free | GPT-4o | $0-10 | Low-cost entry |
-| 💻 Indie (Cost) | Aider + OpenRouter | Sonnet 4.0 | $50-100 | Token-efficient |
-| 💻 Indie (Speed) | Cursor Pro | GPT-4o/Sonnet | $40 | Best UX |
-| 🏢 Team (5-10) | Copilot Business | O3/GPT-4o | $95-200 | Compliance |
-| 🔒 Privacy | Continue.dev + Ollama | Llama 3.3/Qwen | $0-50 | Full control |
-| 🚀 Production | Claude Code + Aider | Opus 4.5/Sonnet | $150-250 | Best quality |
+| Tool | Status | Evidence |
+|:-----|:------:|:---------|
+| **Amazon Q Developer** | 📉 Declining | "Only internal employees use it" |
+| **Devin AI** | ❓ Disappeared | No user reports Dec-Jan |
+| **GitHub Copilot X** | ✅ Superseded | Features merged into standard |
+| **Bolt.new (Production)** | ⚠️ Niche only | "Good for mockups, not production" |
 
 ---
 
-## 📈 Key Takeaways
+## 🔮 2026 Predictions
 
-1. **Claude Code dominates** agentic multi-file editing despite freeze issues
-2. **Cursor recovering** from June 2025 pricing backlash
-3. **Windsurf rising** as cost-effective alternative ($15 vs $20)
-4. **Open-source viable** - Llama 3.3 70B and Qwen 2.5 32B competitive
-5. **Monthly tool rotation** is the new normal
-6. **GitHub Copilot Agent Mode** needs significant work
+1. **BYOK becomes standard** - Opaque SaaS subscriptions die
+2. **"Plan Mode" mandatory** - No direct code generation allowed
+3. **Open-source parity** - 12-18 months away from matching proprietary
+4. **MCP standardization** - Enables zero-friction tool switching
+5. **Security audits required** - AI-suggested dependencies flagged in CI/CD
 
 ---
 
@@ -179,11 +227,12 @@
 ## 📚 Sources
 
 This report synthesizes **140+ verified sources** from:
-- Reddit (r/ClaudeAI, r/CursorIDE, r/LocalLLaMA, r/ChatGPTCoding)
+- Reddit (r/ClaudeAI, r/CursorIDE, r/LocalLLaMA, r/ChatGPTCoding, r/vibecoding)
 - Hacker News discussions
 - Twitter/X developer reports
 - YouTube reviews with real projects
 - Developer blogs and firsthand accounts
+- Gemini Deep Research analysis
 
 ---
 
@@ -210,7 +259,7 @@ MIT - Use freely, share widely!
   <br><br>
   Last updated: January 3, 2026
   <br>
-  Data sources: 140+ verified user reports
+  Data sources: 140+ verified user reports + Gemini Deep Research
   <br>
   Made with ❤️ by <a href="https://github.com/murataslan1">Murat Aslan</a>
 </p>
